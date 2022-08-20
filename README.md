@@ -8,9 +8,9 @@
 
 ```
 
-## files
+## Files
 
--- Create a file and run
+- Create a file and run
 
 ```
   npx tsc src/test.ts
@@ -20,17 +20,21 @@
 
 ```
   npx eslint --init
-
 ```
 
 - Check syntax, find problems, and enforce code style.
 - JavaScript module
 - React
+- Yes
+- Browser
+- Use a popular style guide
+- Standard: https://github.com/standard/eslint-config-standard-with-typescript
+- JavaScript
+- yes
+- npm
 
-* Yes
-* Browser
-* Use a popular style guide
-* Standard: https://github.com/standard/eslint-config-standard-with-typescript
-* JavaScript
-* yes
-* npm
+### To fix eslint rules
+
+```
+npx eslint --fix
+```
