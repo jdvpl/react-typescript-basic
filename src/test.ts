@@ -3,7 +3,7 @@ let b: boolean;
 let c: string;
 let d: string[];
 
-type Permission = "admin" | "user" | "manager";
+export type Permission = "admin" | "user" | "manager";
 
 type TuplePermisions = [Permission, Permission];
 const perm: TuplePermisions = ["admin", "manager"];
@@ -16,7 +16,7 @@ const perm: TuplePermisions = ["admin", "manager"];
  * @property {A} isAdmin - A - isAdmin is a property of type A.
  * @property {P[]} permissions - P[] - the permissions property is an array of P type.
  */
-type BasicUser<A = boolean, P = string[]> = {
+export type BasicUser<A = boolean, P = TuplePermisions> = {
   name: string;
   surname: string;
   age: number;
@@ -84,7 +84,7 @@ function getFirst<T>(arr: T[]): T {
   return arr[0];
 }
 /* Calling the getFirst function and passing in the usersArray as a parameter. */
-getFirst<BasicUser>(usersArray);
+getFirst<FullUser>(usersArray);
 
 /**
  * "The function takes in a parameter of type any and returns nothing."
